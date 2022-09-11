@@ -1,11 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from . import views as view
-from .views import other_page
+
 
 app_name = "main"
-
-urlpatterns = [    
+urlpatterns = [
     path('about/', view.about, name='about'),
     path('', view.index, name='home'),
     path('<str:page>/', view.other_page, name='member'),
