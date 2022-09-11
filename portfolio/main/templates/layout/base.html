@@ -14,5 +14,7 @@
 <body>
     "Это с базовой страницы"
     {% block content %}{% endblock %}
+    
+    <a href="{% url 'main:member' page='gazik' %}">О сайте</a>
 </body>
 </html>
