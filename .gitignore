@@ -1,0 +1,5 @@
+portfolio/db.sqlite3
+portfolio/main/__pycache__
+portfolio/main/migrations
+portfolio/portfolio/__pycache__
+venv
