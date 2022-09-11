@@ -3,9 +3,10 @@ from django.urls import path
 from . import views as view
 from .views import other_page
 
+app_name = "main"
 
-urlpatterns = [
-    path('about/', view.about),
-    path('', view.index),
-    path('<str:page>/', view.other_page, name='member')
+urlpatterns = [    
+    path('about/', view.about, name='about'),
+    path('', view.index, name='home'),
+    path('<str:page>/', view.other_page, name='member'),
 ]
