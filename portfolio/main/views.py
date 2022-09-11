@@ -1,4 +1,4 @@
-from http.client import HTTPResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import get_template
 from django.http import Http404
@@ -18,5 +18,5 @@ def other_page(request, page):
         template = get_template('main/' + page + '.html')
     except TemplateDoesNotExist:
         raise Http404
-    return HTTPResponse(template.render(request=request))
+    return HttpResponse(template.render(request=request))
     
